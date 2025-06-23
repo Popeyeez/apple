@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* PAGE 1 */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 55px;
+            justify-content: center;
+            padding: 79px 0;
+        }
+
+        .image-container {
+            position: relative;
+            width: 275px;
+            height: 370px;
+            overflow: hidden;
+            border-radius: 40px;
+            box-shadow: 8px 8px 0px #29728B40, -8px -8px 0px #1F72AA75;
+            transition: 0.3s;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .image-container img {
+            /* Зурагны хэмжээ засах */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .overlay-text {
+            color: white;
+            font-size: 37px;
+            border: 0;
+            text-decoration: none;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            opacity: 0.7;
+            font-family: "bebas neue";
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0;
+            text-shadow: 0px 4px 5px #000000A6;
+
+
+        }
+
+        .zurag-hover:hover {
+
+            filter: brightness(0.8);
+            z-index: 1;
+
+
+        }
+
+        .image-container:hover .overlay-text {
+            color: white;
+            opacity: 1;
+            z-index: 2;
+
+
+        }
+
+
+        /* PAGE 2 */
+        .gallery-hover {
+            /* Багцаараа */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 50px;
+            align-items: flex-start;
+
+
+        }
+
+
+
+        .hover-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 20px;
+            opacity: 100%;
+            background: transparent;
+
+            margin-bottom: 10px;
+
+            width: 513px;
+            height: 112px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+            border-radius: 120px;
+            transform: none;
+            border: 4px solid transparent;
+            /* Гаднах бордер ийг шилэн болгож нуух */
+
+            box-sizing: border-box;
+
+
+        }
+
+        .hover-box-1 {
+            margin-left: 120px;
+        }
+
+
+
+        .image-preview {
+            /* Hover лох үед гарч ирж байгаа зураг */
+            position: absolute;
+            display: none;
+            /* Hover лох үед гарч ирж байгаа зураг нуух */
+        }
+
+        .image-preview img {
+            /* Hover лох үед гарч ирж байгаа зурагны хэмжээ */
+            border-radius: 50%;
+            width: 250px;
+        }
+
+        .hover-box-container:hover {
+
+            border: 4px solid white;
+            /* Hover лох үед bg-1 гадна хүрээ үүснэ */
+
+        }
+
+        .hover-box-1:hover .image-preview {
+
+
+            display: block;
+            /* Hover үед гарч ирж байгаа зургийг энгийн үед курсор очиход нуух */
+
+        }
+
+        .text-area {
+            color: black;
+            margin-left: 20px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 100%;
+
+        }
+
+        .text-city {
+            display: flex;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-top: 7px;
+            gap: 14px;
+            align-items: center;
+            font-family: "montserrat";
+        }
+
+        .text-city::before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-image: url(/image/Icon\ Container\ 2.png);
+            background-size: contain;
+
+        }
+
+        .day {
+            width: 52px;
+            height: 52px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+
+
+
+        .bg-1 {
+
+            background-color: #EEE9D9;
+            opacity: 80%;
+
+
+        }
+
+        .bg-2 {
+            background-color: #8BB8C1CC;
+            opacity: 80%;
+        }
+
+        .bg-3 {
+            /* 5х газар */
+            background-color: #AAD8D7CC;
+            opacity: 80%;
+        }
+
+        .bg-4 {
+            background-color: #8BC0BDCC;
+            opacity: 80%;
+        }
+
+        .bg-5 {
+            background-color: #97CCE0CC;
+            opacity: 80%;
+        }
+
+
+        /* PAGE 3 */
+
+
+        .package-container {
+            /* 3x Package card / багцлаад удирдах */
+            display: flex;
+            justify-content: space-between;
+
+            padding: 40px;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 150px;
+
+
+        }
+
+        .package-card {
+            /*Package card 3x */
+
+            width: 384px;
+            height: 527px;
+            background-color: #f4f4f4;
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            box-sizing: border-box;
+
+        }
+
+        .package-card:hover {
+            /*Mouse очих үед*/
+
+            box-shadow: 8px 8px 0px #29728B40, -8px -8px 0px #1F72AA75;
+            transition: 0.3s;
+        }
+
+
+
+        .heart {
+            background-image: url(/image/Vector.png);
+            width: 166px;
+            color: #040c11;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .package-card h3 {
+            /*Header        <h3></h3>  */
+            margin-top: 0;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 100%;
+            text-align: start;
+            padding: 25px 35px;
+            color: black;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .p1::before {
+            content: "";
+            width: 66px;
+            height: 66px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding-left: 24px;
+            padding-right: 10px;
+            background-image: url(/image/check.png);
+
+
+        }
+
+        .p1 {
+            /*Доторх бичигнүүд  p1  */
+            font-size: 14px;
+            color: #0e0e0e;
+            margin-bottom: 20px;
+            text-align: start;
+            margin-left: 55px;
+            font-weight: 500;
+            line-height: 100%;
+        }
+
+        .price {
+            /*Үнийн тариф*/
+            font-size: 40px;
+            line-height: 100%;
+            color: black;
+            font-weight: 600;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            font-family: "montserrat";
+        }
+
+
+
+
+
+        .select-package {
+            /*Select Package Button*/
+            width: 236px;
+            height: 18px;
+            background-color: #A4D1E2;
+            color: black;
+            border: 0;
+            position: absolute;
+            /*  box-ийн доод төвд байрлуулахын тулд */
+            bottom: 40px;
+            /*  доороос зай */
+            left: 50%;
+            /* голлуулахаар */
+            transform: translateX(-50%);
+            /* яг төвд */
+            padding: 10px 40px;
+            border: none;
+            background-color: #A4D1E2;
+            color: black;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .package-card:hover .select-package {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -1%;
+            background-color: #040c11;
+            color: white;
+            transition: 0.3s;
+            /*Текст цагаан болгох*/
+
+        }
+
+        .favorite-container {
+            padding: 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: row-reverse;
+            gap: 16px;
+            /* Текст ба зүрхний хооронд зай */
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 100%;
+
+            color: black;
+        }
+
+        .favorite-button {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+
+            border: 1px solid black;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            position: relative;
+
+        }
+
+        .favorite-button .heart {
+
+            width: 16px;
+            height: 16px;
+            background-image: url(/image/Vector.png);
+
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .favorite-button:hover {
+            background-color: #D6D8DB;
+
+
+        }
+
+
+
+        .body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "inter";
+            width: 100%;
+            height: 100%;
+
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="body">
+
+    <!-- PAGE 1 -->
+    <div
+        style=" width:100%; max-width:  1440px; background-image: url('/image/HeroImage.png'); height: 773px;background-repeat: no-repeat;text-decoration: none;box-sizing: border-box;">
+        <div
+            style="display: flex;align-items: center; padding: 22px 118px;width: 1215px;justify-content: space-between;margin-left: autom;margin-right: auto;">
+            <a href="http://127.0.0.1:5500/6.16.html">
+                <img style="width: 101px;height: 35px;" src="/image/logo 1.png" />
+            </a>
+
+            <div style="display: flex;gap: 60px; color: white;font-size: 25px;">
+                <a cass="menu" style="color: white;text-decoration: none;" href="#">Home</a>
+                <a cass="menu" style="color: white;text-decoration: none;" href="#">About</a>
+                <a cass="menu" style="color: white;text-decoration: none;" href="#">Contact</a>
+                <a cass="menu" style="color: white;text-decoration: none;" href="#"><img src="/image/user.png"></a>
+
+            </div>
+            <div>
+                <button
+                    style="font-size: 19px; background-color: white; border-radius: 100% ;border: 0; color: black; margin-right: 0px;padding: 20px 20px;cursor: pointer; ">EN</button>
+            </div>
+
+        </div>
+        <div
+            style="font-size: 80px;font-family: bebas neue; display: flex;justify-content: center;margin-top: 70px;color: #FDFDFEFA;opacity: 70%;">
+            PURE MAGIC </div>
+        <div
+            style="display: flex; font-size: 250px;justify-content: center;font-family:bebas neue ; color: #FDFDFEFA;font-weight: 400;font: bebas neue;border: 2px;line-height: 100%;">
+            AWAITS!
+        </div>
+        <div
+            style="display: flex;font-size: 64px; font-family: hanuman; color: #FFFFFF;justify-content: center;font: Hanuman;font-weight: 900;opacity: 80%;">
+            2024</div>
+    </div>
+    <div
+        style="background-image: url(/image/Location\ image.png);width:100%; max-width:  1440px;height: 500px;display: flex;justify-content: center; gap: 100px;text-align: center;box-sizing: border-box;">
+        <div class="gallery">
+            <div class="image-container">
+                <div class="zurag-hover"> <img src="/image/Hover card image (1).png"> </div>
+                <div class="overlay-text">TERKHIIN TSAGAAN LAKE
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="zurag-hover"> <img src="/image/Hover card image (2).png" alt="Зураг 2"></div>
+                <div class="overlay-text">KHUVSGUL LAKE
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="zurag-hover"> <img src="/image/Hover card image.png" alt="Зураг 3"> </div>
+                <div class="overlay-text">KHORGIIN TOGOO
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="zurag-hover"> <img src="/image/Untitled.png" alt="Зураг 4"></div>
+                <div class="overlay-text">AMARBAYASGALANT MONASTERY</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PAGE 2 -->
+    <div
+        style="text-align: center; width:100%; max-width:  1440px;height: 1022px;background-image: url(/image/Roadmap\ image.png);box-sizing: border-box;">
+        <div
+            style="margin-top: 0px; font-size: 42px; font-weight: 600; line-height: 100%; vertical-align: bottom;text-align:center; ">
+            Destination of Our
+            Agency</div>
+        <p style="font-size: 20px;font-weight: 500;line-height: 100%;opacity: 80%;"> Pack your bags and get ready</p>
+
+
+
+        <div class="gallery-hover">
+            <div class="hover-box-1">
+                <div style="background-color: #EEE9D9;
+            opacity: 80%;" class="hover-box-container">
+                    <div class="hover-box">
+                        <div class="text-area">Sukhbaatar square</div>
+                        <div class="text-city">Ulaanbator</div>
+                    </div>
+                    <div class="day">DAY 1</div>
+                </div>
+                <div style="left: 1120px;bottom: 250px;" class="image-preview">
+                    <img style="opacity: 100%;" src="/image/Frame 176.png" alt="Preview">
+                </div>
+            </div>
+
+
+
+            <div class="hover-box-1">
+                <div style="background-color: #8BB8C1CC;
+            opacity: 80%;" class="hover-box-container">
+                    <div class="hover-box">
+                        <div class="text-area">Amarbayasgalant Monastery</div>
+                        <div class="text-city">Bulgan</div>
+                    </div>
+                    <div class="day">DAY 2</div>
+
+
+                </div>
+                <div style="top: 25px;left: 840px;" class="image-preview">
+                    <img src="/image/Frame 177.png" alt="Preview">
+                </div>
+            </div>
+
+
+            <div class="hover-box-1">
+                <div style="background-color: #AAD8D7CC;
+            opacity: 80%;" class="hover-box-container">
+                    <div class="hover-box">
+                        <div class="text-area">Khorgiin togoo</div>
+                        <div class="text-city">Arkhangai</div>
+                    </div>
+                    <div class="day">DAY 3</div>
+
+
+
+                </div>
+                <div style="left: 720px;top: 200px;" class="image-preview">
+                    <img src="image/11111.png" alt="Preview">
+                </div>
+            </div>
+
+
+            <div class="hover-box-1">
+                <div style="background-color: #8BC0BDCC;
+            opacity: 80%;" class="hover-box-container">
+                    <div class="hover-box">
+                        <div class="text-area">Terkhiin tsagaan lake</div>
+                        <div class="text-city">Arkhangai</div>
+                    </div>
+                    <div class="day">DAY 4</div>
+
+
+                </div>
+                <div style="top: 150px; left: 750px;" class="image-preview">
+                    <img src="/image/Frame 178.png" alt="preview">
+                </div>
+            </div>
+
+
+            <div class="hover-box-1">
+                <div style="background-color: #97CCE0CC;
+            opacity: 80%;" class="hover-box-container">
+                    <div class="hover-box">
+                        <div class="text-area">Khuvsgul lake</div>
+                        <div class="text-city">Khuvsgul</div>
+                    </div>
+                    <div class="day">DAY 5</div>
+
+
+                </div>
+                <div style="top: 9px;left: 740px;" class="image-preview">
+                    <img src="/image/Frame 179.png" alt="Preview">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- PAGE 3 -->
+
+    <div
+        style="width:100%; max-width:  1440px;height: 1120px;background-image: url(/image/Price&Footer\ image.png);text-align: center;box-sizing: border-box;">
+        <h1
+            style="margin: 0; font-size: 42px; font-weight: 600; line-height: 100%; vertical-align: bottom;text-align:center; ">
+            Pricing of Our Agency</h1>
+        <p style="font-size: 20px;line-height: 100%;font-weight: 500;"> Choose a Package That's Right For You</p>
+
+        <div class="package-container">
+            <div class="package-card">
+                <div class="select-package">Select Package</div>
+                <div class="favorite-container">
+                    <span class="text">Budget Package</span>
+                    <button class="favorite-button">
+                        <span class="heart"></span>
+                    </button>
+                </div>
+                <p
+                    style="margin-top: 72px;text-align: start;margin-left: 10px;opacity: 70%;font-size: 16px;line-height: 100%;font-weight: 500">
+                    Essentials Covered</p>
+                <p style="text-align: start;margin-left: 55px;font-weight: 500;font-size: 18px;line-height: 100%;">
+                    Includes:
+
+                </p>
+                <p class="p1"> Group transportation (shared van/bus)</p>
+                <p class="p1"> Standard accommodation (yurt or guesthouse)</p>
+                <p class="p1">Guided lake tour</p>
+                <p class="p1">1 meal per day (breakfast)</p>
+                <div class="price">500$</div>
+
+            </div>
+            <div class="package-card">
+                <div class="select-package">Select Package</div>
+                <div class="favorite-container">
+                    <span class="text">Standart Package</span>
+                    <button class="favorite-button">
+                        <span class="heart"></span>
+                    </button>
+                </div>
+                <div
+                    style=" margin-top: 70px; width: 306px;height: 27px;display: flex;align-items: center;flex-direction: row-reverse;justify-content: space-between; ">
+                    <p
+                        style="background-color: #6972B5;width: 90px;height: 27px;color: white;border: 0;border-radius: 15px;text-align: center;align-items: center;display: flex;justify-content: center;font-size: 14px;">
+                        Popular</p>
+                    <div
+                        style="text-align: start;margin-left: 10px;opacity: 70%;font-size: 16px;line-height: 100%;font-weight: 500;">
+                        Balanced Adventure </div>
+
+
+                </div>
+                <p
+                    style="text-align: start;margin-left: 55px;font-size: 18px;font-weight: 500;font-size: 18px;line-height: 100%;">
+                    Includes:
+                </p>
+                <p class="p1"> Comfortable transportation (mini-bus)</p>
+                <p class="p1"> Mid-range accommodation (private yurt or lodge)</p>
+                <p class="p1"> Guided lake tour + nearby hiking</p>
+                <p class="p1"> 2 meals per day (breakfast and dinner)</p>
+
+                <div class="price">800$
+
+                </div>
+
+            </div>
+            <div class="package-card">
+                <div class="select-package">Select Package</div>
+
+                <div class="favorite-container">
+                    <span class="text">Luxury Package</span>
+                    <button class="favorite-button">
+                        <span class="heart"></span>
+                    </button>
+                </div>
+
+
+                <p
+                    style="margin-top: 72px;text-align: start;margin-left: 10px;opacity: 70%;font-size: 16px;line-height: 100%;font-weight: 500;">
+                    Ultimate Comfort</p>
+
+                <p style="text-align: start;margin-left: 55px;font-weight: 500;font-size: 18px;line-height: 100%;">
+                    Includes:
+
+                </p>
+                <p class="p1"> Private transportation (SUV)</p>
+                <p class="p1"> Luxury accommodation (lakefront lodge)</p>
+                <p class="p1"> Guided tours (lake + reindeer herder experience)</p>
+                <p class="p1"> All meals included (local cuisine)</p>
+                <div class="price">1200$</div>
+
+
+
+            </div>
+
+        </div>
+
+        <!-- PAGE 4 -->
+        <div style="display: flex;gap: 20px;">
+            <div
+                style="width: 167px;height: 44px;background-color: white;margin-left: 40px;margin-top: 125px;display: flex;align-items: center;justify-content: center;text-align: center;gap: 10px;color: #6972B5;border-radius: 15px;font-family: montserrat;font-size: 18px;font-weight: 700;">
+                <a href="https://facebook.com/pinecone"> <img style="width: 25px;height: 25px;"
+                        src="/image/Facebook Icon.png"></a>Facebook
+            </div>
+            <div
+                style="width: 167px;height: 44px;background-color: white;margin-top: 125px;display: flex;align-items: center;justify-content: center;gap: 10px;color: #6972B5;border-radius: 15px;font-family: montserrat;font-size: 18px;font-weight: 700;">
+                <a href="https://facebook.com/pinecone"><img style="width: 25px;height: 25px;"
+                        src="/image/Instagram Icon.png"></a>Instagram
+            </div>
+            <div style="margin-top: 125px;margin-left: 850px;"> <a href="http://127.0.0.1:5500/6.16.html">
+                    <img style="width: 101px;height: 35px;" src="/image/logo 1.png" />
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
