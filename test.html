@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* Ерөнхий */
+/* Ерөнхий */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#toggle-menu {
+  display: none; /* input харагдахгүй */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* анх харагдахгүй */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #toggle-menu:checked + .hamburger + .menu {
+    display: flex; /* checkbox checked бол меню гарна */
+  }
+}
+
+</style>
+</head>
+<body>
+    
+<header>
+  <div class="logo">MyLogo</div>
+
+  <!-- Hamburger icon -->
+  <input type="checkbox" id="toggle-menu">
+  <label for="toggle-menu" class="hamburger">&#9776;</label>
+
+  <!-- Navigation -->
+  <nav class="menu">
+    <a href="#">Нүүр</a>
+    <a href="#">Бидний тухай</a>
+    <a href="#">Үйлчилгээ</a>
+    <a href="#">Холбоо барих</a>
+  </nav>
+</header>
+
+
+
+</body>
+</html>
