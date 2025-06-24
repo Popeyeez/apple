@@ -1,307 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
-      .body {
-        background-color: black;
-        font-family: "inter";
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
 
-      .header {
-        width: 1920px;
-        height: 44px;
-        background-color: #f5f5f7cc;
-        display: flex;
-        gap: 24px;
-        justify-content: center;
-        align-items: center;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 60px;
-        letter-spacing: -0.28px;
-        vertical-align: middle;
-        color: #000000;
-        box-sizing: border-box;
-      }
+<head>
+  <link rel="stylesheet" href="6.23.css" />
 
-      .header1 {
-        width: 1920px;
-        height: 52px;
-        background-color: #ffffff;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0px;
-        vertical-align: middle;
-        text-align: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        box-sizing: border-box;
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
 
-      .header a {
-        text-decoration: none;
-        color: #000000;
-      }
-
-      .mid {
-        background-image: url(/Untitled/images/Background.png);
-        width: 1920px;
-        height: 692px;
-        display: flex;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 55px;
-        gap: 20px;
-        box-sizing: border-box;
-      }
-
-      .mid1 {
-        background-image: url(/Untitled/images/Background1.png);
-        width: 1920px;
-        height: 692px;
-        display: flex;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        box-sizing: border-box;
-      }
-      .mid2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url(/Untitled/images/Figure.png);
-        background-repeat: no-repeat;
-        width: 1920px;
-        height: 692px;
-        gap: 16px;
-        padding-top: 446px;
-        box-sizing: border-box;
-      }
-      .mid3 {
-        background-color: white;
-        padding: 0px 12px;
-        width: 1920px;
-        height: 1764px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        box-sizing: border-box;
-      }
-      .mid3-1 {
-        background-image: url(/Untitled/images/Figure1.png);
-        width: 942px;
-        height: 580px;
-      }
-
-      .mid3-2 {
-        background-image: url(/Untitled/images/Figure2.png);
-        width: 942px;
-        height: 580px;
-        color: white;
-      }
-      .mid3-3 {
-        background-image: url(/Untitled/images/Figure3.png);
-        width: 942px;
-        height: 580px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 58px;
-        
-         box-sizing: border-box;
-      }
-      .mid3-4 {
-        background-image: url(/Untitled/images/Figure4.png);
-        width: 942px;
-        height: 580px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 48px;
-         box-sizing: border-box;
-      }
-      .mid3-5 {
-        background-image: url(/Untitled/images/Figure5.png);
-        width: 942px;
-        height: 580px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 58px;
-         box-sizing: border-box;
-      }
-      .mid3-6 {
-        background-image: url(/Untitled/images/Figure6.png);
-        width: 942px;
-        height: 580px;
-          display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 58px;
-         box-sizing: border-box;
-      }
-
-      .tv{
-        background-color: white;
-        width: 1920px;
-        height: 705.25px;
-        box-sizing: border-box;
-      }
-     .slider {
-  width: 1250px;  /* viewport өргөн */
-  height: 668px;
-  overflow: hidden;
-  position: relative;
-  margin: 20px auto;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-  height: 100%;
-}
-
-.slide {
-  flex: 0 0 1250px;  /* center slide өргөн */
-  margin: 0 20px;    /* хажуу тал гаргах */
-  flex-shrink: 0;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.dots label {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background: #bbb;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-#s1:checked ~ .slides {
-  transform: translateX(calc(50% - 625px - 20px));
-}
-
-#s2:checked ~ .slides {
-  transform: translateX(calc(50% - 1875px - 60px));
-}
-
-#s3:checked ~ .slides {
-  transform: translateX(calc(50% - 3125px - 100px));
-}
-
-#s1:checked ~ .dots label[for="s1"],
-#s2:checked ~ .dots label[for="s2"],
-#s3:checked ~ .dots label[for="s3"] {
-  background: #717171;
-}
-
-
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body class="body">
-    <div class="header">
-      <div>
-        <a href="https://apple.com"
-          ><img
-            style="width: 12.97px; height: 15.94px"
-            src="/Untitled/images/apple.logo.png"
-        /></a>
-      </div>
-      <div><a href="https://apple.com"> Store </a></div>
-      <div><a href="https://apple.com"> Mac </a></div>
-      <div><a href="https://apple.com"> iPad </a></div>
-      <div><a href="https://apple.com"> iPhone </a></div>
-      <div><a href="https://apple.com"> Watch </a></div>
-      <div><a href="https://apple.com"> Vision </a></div>
-      <div><a href="https://apple.com"> Airpods </a></div>
-      <div><a href="https://apple.com"> TV & Home </a></div>
-      <div><a href="https://apple.com"> Entertainment </a></div>
-      <div><a href="https://apple.com"> Accessories </a></div>
-      <div><a href="https://apple.com"> Support </a></div>
-      <div>
-        <img
-          style="width: 14.08px; height: 14.08px; cursor: pointer"
-          src="/Untitled/images/search.logo.png"
-        />
-      </div>
-      <div>
-        <a href="https://apple.com/market"
-          ><img
-            style="width: 12.97px; height: 14.91px"
-            src="/Untitled/images/market.logo.png"
-        /></a>
-      </div>
+<body>
+  <div class="header">
+    <div>
+      <a href="https://apple.com"><img style="width: 12.97px; height: 15.94px"
+          src="/Untitled/images/apple.logo.png" /></a>
     </div>
-    <div class="header1">
-      We're donating $5 to the Global Fund for every purchase made with Apple
-      Pay at Apple. Through 12/8.
+    <div><a href="http://127.0.0.1:5501/page2.html"> Store </a></div>
+    <div><a href="https://apple.com"> Mac </a></div>
+    <div><a href="https://apple.com"> iPad </a></div>
+    <div><a href="https://apple.com"> iPhone </a></div>
+    <div><a href="https://apple.com"> Watch </a></div>
+    <div><a href="https://apple.com"> Vision </a></div>
+    <div><a href="https://apple.com"> Airpods </a></div>
+    <div><a href="https://apple.com"> TV & Home </a></div>
+    <div><a href="https://apple.com"> Entertainment </a></div>
+    <div><a href="https://apple.com"> Accessories </a></div>
+    <div><a href="https://apple.com"> Support </a></div>
+    <div>
+      <img style="width: 14.08px; height: 14.08px; cursor: pointer" src="/Untitled/images/search.logo.png" />
     </div>
-    <div style="background-color: white; padding-bottom: 12px; box-sizing: border-box;">
-      <div class="mid">
-        <div
-          style="
+    <div>
+      <a href="https://apple.com/market"><img style="width: 12.97px; height: 14.91px"
+          src="/Untitled/images/market.logo.png" /></a>
+    </div>
+  </div>
+  <div class="header1">
+    We're donating $5 to the Global Fund for every purchase made with Apple
+    Pay at Apple. Through 12/8.
+  </div>
+
+
+  </div>
+  <div>
+    <div class="mid">
+      <div style="
             font-size: 52px;
             line-height: 60px;
             letter-spacing: -0.28px;
             vertical-align: middle;
             font-weight: 600;
-          "
-        >
-          iPhone 16 Pro
-        </div>
-        <div
-          style="
+          ">
+        iPhone 16 Pro
+      </div>
+      <div style="
             font-size: 24px;
             line-height: 32px;
             font-weight: 400px;
             vertical-align: middle;
-          "
-        >
-          Hello, Apple Intelligence.
-        </div>
-        <div
-          style="
+          ">
+        Hello, Apple Intelligence.
+      </div>
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -317,12 +84,10 @@ input[type="radio"] {
               border-radius: 999px;
               cursor: pointer;
               box-sizing: border-box;
-            "
-          >
-            Learn more
-          </div>
-          <div
-            style="
+            ">
+          Learn more
+        </div>
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -336,18 +101,15 @@ input[type="radio"] {
               display: flex;
               justify-content: center;
               align-items: center;
-              cursor: pointer;
-            "
-          >
-            Buy
-          </div>
+              cursor: pointer; " class="buy">
+          Buy
         </div>
       </div>
     </div>
-
-    <div class="mid1">
-      <div
-        style="
+  </div>
+  <div style="width: 100%;height: 12px;background-color: white;"></div>
+  <div class="mid1">
+    <div style="
           font-size: 52px;
           padding-top: 55px;
           line-height: 60px;
@@ -355,30 +117,24 @@ input[type="radio"] {
           vertical-align: middle;
           font-weight: 600;
            box-sizing: border-box;
-        "
-      >
-        iPhone 16 Pro
-      </div>
-      <div
-        style="
+        ">
+      iPhone 16 Pro
+    </div>
+    <div style="
           font-size: 24px;
           line-height: 32px;
           font-weight: 400px;
           vertical-align: middle;
-        "
-      >
-        Hello, Apple Intelligence.
-      </div>
-      <div
-        style="
+        ">
+      Hello, Apple Intelligence.
+    </div>
+    <div style="
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 10px;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
@@ -395,12 +151,10 @@ input[type="radio"] {
             cursor: pointer;
             color: #000000;
             box-sizing: border-box;
-          "
-        >
-          Learn more
-        </div>
-        <div
-          style="
+          ">
+        Learn more
+      </div>
+      <div style="
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
@@ -415,38 +169,33 @@ input[type="radio"] {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-          "
-        >
-          Buy
-        </div>
+          " class="buy1">
+
+        Buy
       </div>
     </div>
+  </div>
 
-    <div class="mid2">
-      <div
-        style="
+  <div class="mid2">
+    <div style="
           font-size: 52px;
           line-height: 60px;
           letter-spacing: -0.28px;
           vertical-align: middle;
           font-weight: 600;
-        "
-      >
-        Gift Magic.
-      </div>
-      <div
-        style="
+        ">
+      Gift Magic.
+    </div>
+    <div style="
           font-size: 24px;
           line-height: 32px;
           letter-spacing: 0px;
           vertical-align: middle;
           font-weight: 400;
-        "
-      >
-        Make their holiday wish come true.
-      </div>
-      <div
-        style="
+        ">
+      Make their holiday wish come true.
+    </div>
+    <div style="
           font-size: 16px;
           letter-spacing: -0.37px;
           vertical-align: middle;
@@ -462,30 +211,23 @@ input[type="radio"] {
           color: white;
           cursor: pointer;
           box-sizing: border-box;
-        "
-      >
-        Shop gifts
-      </div>
+        ">
+      Shop gifts
     </div>
-    <div class="mid3">
-      <div class="mid3-1">
-        <div>
-          <div
-            style="
+  </div>
+  <div class="mid3">
+    <div class="mid3-1">
+      <div>
+        <div style="
               display: flex;
               justify-content: center;
               padding-top: 58px;
               box-sizing: border-box;
               
-            "
-          >
-            <img
-              style="width: 430px; height: 33px"
-              src="/Untitled/images/ipadair.png"
-            />
-          </div>
-          <div
-            style="
+            ">
+          <img style="width: 430px; height: 33px" src="/Untitled/images/ipadair.png" />
+        </div>
+        <div style="
               display: flex;
               justify-content: center;
               padding-top: 11px;
@@ -495,22 +237,18 @@ input[type="radio"] {
               line-height: 25px;
               vertical-align: middle;
               letter-spacing: 0;
-            "
-          >
-            Two sizes. Faster chip. Does it all.
-          </div>
-          <div
-            style="
+            ">
+          Two sizes. Faster chip. Does it all.
+        </div>
+        <div style="
               display: flex;
               justify-content: center;
               align-items: center;
               gap: 16px;
               padding-top: 20px;
                box-sizing: border-box;
-            "
-          >
-            <div
-              style="
+            ">
+          <div style="
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
@@ -527,12 +265,10 @@ input[type="radio"] {
                 cursor: pointer;
                 color: white;
                 box-sizing: border-box;
-              "
-            >
-              Learn more
-            </div>
-            <div
-              style="
+              ">
+            Learn more
+          </div>
+          <div style="
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
@@ -548,24 +284,21 @@ input[type="radio"] {
                 align-items: center;
                 cursor: pointer;
                 color: #2997ff;
-              "
-            >
-              Buy
-            </div>
+              " class="buy">
+            <div class="buy-text">Buy </div>
+
           </div>
         </div>
-
-        <div style="display: flex; justify-content: center; padding-top: 324px; box-sizing: border-box;">
-          <img
-            style="width: 169px; height: 18px"
-            src="/Untitled/images/hello.png"
-            alt="hello_apple"
-          />
-        </div>
       </div>
-      <div class="mid3-2">
-        <div
-          style="
+
+      <div style="background: linear-gradient(to right, #0090F7, #BA62FC, #F2416B , #F55600 ); /* Gradient өнгө */
+            -webkit-background-clip: text; /* Text clip */
+            " class="gradient-text">
+        Hello, Apple Intelligence.
+      </div>
+    </div>
+    <div class="mid3-2">
+      <div style="
             font-size: 36px;
             font-weight: 600;
             line-height: 44px;
@@ -573,12 +306,10 @@ input[type="radio"] {
             padding-top: 401px;
             text-align: center;
              box-sizing: border-box;
-          "
-        >
-          AirPods Pro 2
-        </div>
-        <div
-          style="
+          ">
+        AirPods Pro 2
+      </div>
+      <div style="
             font-size: 18px;
             font-weight: 400;
             line-height: 25px;
@@ -586,22 +317,18 @@ input[type="radio"] {
             text-align: center;
             padding-top: 2px;
              box-sizing: border-box;
-          "
-        >
-          Now with a Hearing Aid feature.2
-        </div>
-        <div
-          style="
+          ">
+        Now with a Hearing Aid feature.2
+      </div>
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 16px;
             padding-top: 10px;
              box-sizing: border-box;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -617,12 +344,10 @@ input[type="radio"] {
               cursor: pointer;
               color: white;
               box-sizing: border-box;
-            "
-          >
-            Learn more
-          </div>
-          <div
-            style="
+            ">
+          Learn more
+        </div>
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -638,43 +363,34 @@ input[type="radio"] {
               align-items: center;
               cursor: pointer;
               color: #2997ff;
-            "
-          >
-            Buy
-          </div>
+            " class="buy">
+          <div class="buy-text"> Buy </div>
+
         </div>
       </div>
-      <div class="mid3-3">
-        <div
-          style="
+    </div>
+    <div class="mid3-3">
+      <div style="
             width: 152px;
             height: 39px;
             gap: 8px;
             display: flex;
             align-items: center;
-          "
-        >
-          <div>
-            <img
-              style="width: 26.35293960571289px; height: 32px"
-              src="/Untitled/images/apple.logo.png"
-              alt=""
-            />
-          </div>
-          <div
-            style="
+          ">
+        <div>
+          <img style="width: 26.35293960571289px; height: 32px" src="/Untitled/images/apple.logo.png" alt="" />
+        </div>
+        <div style="
               font-size: 32px;
               line-height: 100%;
               font-weight: 700;
               vertical-align: middle;
               letter-spacing: 0px;
-            "
-          >
-            WATCH
-          </div>
+            ">
+          WATCH
         </div>
-        <div
-          style="
+      </div>
+      <div style="
             font-size: 15px;
             line-height: 100%;
             letter-spacing: 2px;
@@ -682,12 +398,10 @@ input[type="radio"] {
             font-weight: 700;
             padding-top: 4px;
              box-sizing: border-box;
-          "
-        >
-          SERIES 10
-        </div>
-        <div
-          style="
+          ">
+        SERIES 10
+      </div>
+      <div style="
             font-size: 18px;
             line-height: 25px;
             letter-spacing: 0%;
@@ -695,22 +409,18 @@ input[type="radio"] {
             font-weight: 400;
             padding-top: 4px;
              box-sizing: border-box;
-          "
-        >
-          Thinstant classic.
-        </div>
-        <div
-          style="
+          ">
+        Thinstant classic.
+      </div>
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 16px;
             padding-top: 16px;
              box-sizing: border-box;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -726,12 +436,10 @@ input[type="radio"] {
               cursor: pointer;
               color: white;
               box-sizing: border-box;
-            "
-          >
-            Learn more
-          </div>
-          <div
-            style="
+            ">
+          Learn more
+        </div>
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -747,28 +455,25 @@ input[type="radio"] {
               align-items: center;
               cursor: pointer;
               color: #2997ff;
-            "
-          >
-            Buy
-          </div>
+            " class="buy">
+          <div class="buy-text"> Buy </div>
+
         </div>
       </div>
-      <div class="mid3-4">
-          <div
-            style="
+    </div>
+    <div class="mid3-4">
+      <div style="
               font-size: 36px;
               line-height: 44px;
               font-weight: 600;
               vertical-align: middle;
               letter-spacing: 0%;
-            "
-          >
-           MacBook Air
-          </div>
-        
-       
-        <div
-          style="
+            ">
+        MacBook Air
+      </div>
+
+
+      <div style="
             font-size: 18px;
             line-height: 25px;
             letter-spacing: 0%;
@@ -776,22 +481,18 @@ input[type="radio"] {
             font-weight: 400;
             padding-top: 2px;
              box-sizing: border-box;
-          "
-        >
-          Lean. Mean. M3 machine.
-        </div>
-        <div
-          style="
+          ">
+        Lean. Mean. M3 machine.
+      </div>
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 16px;
             padding-top: 10px;
              box-sizing: border-box;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -808,12 +509,10 @@ input[type="radio"] {
               cursor: pointer;
               color: white;
               box-sizing: border-box;
-            "
-          >
-            Learn more
-          </div>
-          <div
-            style="
+            ">
+          Learn more
+        </div>
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -829,43 +528,34 @@ input[type="radio"] {
               align-items: center;
               cursor: pointer;
               color: #2997ff;
-            "
-          >
-            Buy
-          </div>
+            " class="buy">
+          <div class="buy-text">Buy </div>
+
         </div>
       </div>
-      <div class="mid3-5">
-         <div
-          style="
+    </div>
+    <div class="mid3-5">
+      <div style="
             width: 161px;
             height: 39px;
             gap: 4px;
             display: flex;
             align-items: center;
-          "
-        >
-          <div>
-            <img
-              style="width: 26.35293960571289px; height: 32px"
-              src="/Untitled/images/apple.logo.png"
-              alt=""
-            />
-          </div>
-          <div
-            style="
+          ">
+        <div>
+          <img style="width: 26.35293960571289px; height: 32px" src="/Untitled/images/apple.logo.png" alt="" />
+        </div>
+        <div style="
               font-size: 32px;
               line-height: 100%;
               font-weight: 700;
               vertical-align: middle;
               letter-spacing: 0px;
-            "
-          >
-            Trade In
-          </div>
+            ">
+          Trade In
         </div>
-        <div
-          style="
+      </div>
+      <div style="
           display: flex;
           text-align: center;
           align-items: center;
@@ -878,24 +568,20 @@ input[type="radio"] {
             font-weight: 400;
             padding-top: 4px;
              box-sizing: border-box;
-          "
-        >
-          Get $180-$650 in credit when you
-            trade in iPhone 12 or higher.3
-        </div>
-       
-        <div
-          style="
+          ">
+        Get $180-$650 in credit when you
+        trade in iPhone 12 or higher.3
+      </div>
+
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 16px;
             padding-top: 16px;
             box-sizing: border-box;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -911,44 +597,34 @@ input[type="radio"] {
               cursor: pointer;
               color: white;
               box-sizing: border-box;
-            "
-          >
-            Get your estimate
-          </div>
+            ">
+          Get your estimate
         </div>
-
       </div>
-      <div class="mid3-6">
-        <div
-          style="
+
+    </div>
+    <div class="mid3-6">
+      <div style="
             
             height: 39px;
             gap: 8px;
             display: flex;
             align-items: center;
-          "
-        >
-          <div>
-            <img
-              style="width: 26.35293960571289px; height: 32px"
-              src="/Untitled/images/apple.logo.png"
-              alt=""
-            />
-          </div>
-          <div
-            style="
+          ">
+        <div>
+          <img style="width: 26.35293960571289px; height: 32px" src="/Untitled/images/apple.logo.png" alt="" />
+        </div>
+        <div style="
               font-size: 32px;
               line-height: 100%;
               font-weight: 700;
               vertical-align: middle;
               letter-spacing: 0px;
-            "
-          >
-            Card
-          </div>
+            ">
+          Card
         </div>
-        <div
-          style=" display: flex;
+      </div>
+      <div style=" display: flex;
           text-align: center;
           align-items: center;
           width: 322px;
@@ -960,23 +636,19 @@ input[type="radio"] {
             font-weight: 400;
             padding-top: 4px;
              box-sizing: border-box;
-          "
-        >
-          Get up to 3% Daily Cash back
-            with every purchase.
-        </div>
-        <div
-          style="
+          ">
+        Get up to 3% Daily Cash back
+        with every purchase.
+      </div>
+      <div style="
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 16px;
             padding-top: 16px;
              box-sizing: border-box;
-          "
-        >
-          <div
-            style="
+          ">
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -992,12 +664,10 @@ input[type="radio"] {
               cursor: pointer;
               color: white;
               box-sizing: border-box;
-            "
-          >
-            Learn more
-          </div>
-          <div
-            style="
+            ">
+          Learn more
+        </div>
+        <div style="
               font-size: 16px;
               font-weight: 400;
               line-height: 20px;
@@ -1014,36 +684,38 @@ input[type="radio"] {
               cursor: pointer;
               color: #2997ff;
               gap: 16px;
-            "
-          >
-            Apply now
-          </div>
+              
+            " class="buy">
+          <div class="buy-text">Apply now </div>
+
         </div>
       </div>
     </div>
-<div class="tv">
- <div class="slider">
-  <input type="radio" name="slider" id="s1" checked>
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s3">
+  </div>
+  <div class="tv">
+    <div class="slider">
+      <input type="radio" name="slider" id="s1" checked>
+      <input type="radio" name="slider" id="s2">
+      <input type="radio" name="slider" id="s3">
 
-  <div class="slides">
-    <div class="slide"><img src="/Untitled/images/tv1.jpg" alt=""></div>
-    <div class="slide"><img src="/Untitled/images/tv2.png" alt=""></div>
-    <div class="slide"><img src="/Untitled/images/tv3.png" alt=""></div>
+      <div class="slides">
+        <div class="slide"><img src="/Untitled/images/tv1.jpg" alt=""></div>
+        <div class="slide"><img src="/Untitled/images/tv2.png" alt=""></div>
+        <div class="slide"><img src="/Untitled/images/tv3.png" alt=""></div>
+      </div>
+
+      <div class="dots">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+      </div>
+    </div>
+
   </div>
 
-  <div class="dots">
-    <label for="s1"></label>
-    <label for="s2"></label>
-    <label for="s3"></label>
-  </div>
-</div>
-
-</div>
 
 
 
+</body>
 
-  </body>
 </html>
