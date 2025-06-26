@@ -2,54 +2,7 @@
 <html lang="en">
 
 <head>
-    <style>
-        .body {
-            background-color: black;
-            font-family: "inter";
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .header {
-            width: 1920px;
-            height: 44px;
-            background-color: #f5f5f7cc;
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            align-items: center;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 60px;
-            letter-spacing: -0.28px;
-            vertical-align: middle;
-            color: #000000;
-            box-sizing: border-box;
-        }
-
-        .header1 {
-            width: 1920px;
-            height: 60px;
-            background-color: #ffffff;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            letter-spacing: 0px;
-            vertical-align: middle;
-            text-align: center;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            box-sizing: border-box;
-        }
-
-        .header a {
-            text-decoration: none;
-            color: #000000;
-        }
-    </style>
+    <link rel="stylesheet" href="page2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,34 +10,71 @@
         rel="stylesheet" />
 </head>
 
-<body class="body">
-    <div class="header">
+<body>
+    <header>
         <div>
-            <a href="https://apple.com"><img style="width: 12.97px; height: 15.94px"
-                    src="/Untitled/images/apple.logo.png" /></a>
+            <a href="https://apple.com"><img class="logo" src="/Untitled/images/apple.logo.png" /></a>
         </div>
-        <div><a href="https://apple.com"> Store </a></div>
-        <div><a href="https://apple.com"> Mac </a></div>
-        <div><a href="https://apple.com"> iPad </a></div>
-        <div><a href="https://apple.com"> iPhone </a></div>
-        <div><a href="https://apple.com"> Watch </a></div>
-        <div><a href="https://apple.com"> Vision </a></div>
-        <div><a href="https://apple.com"> Airpods </a></div>
-        <div><a href="https://apple.com"> TV & Home </a></div>
-        <div><a href="https://apple.com"> Entertainment </a></div>
-        <div><a href="https://apple.com"> Accessories </a></div>
-        <div><a href="https://apple.com"> Support </a></div>
-        <div>
-            <img style="width: 14.08px; height: 14.08px; cursor: pointer" src="/Untitled/images/search.logo.png" />
+
+        <div class="right">
+            <input type="checkbox" id="toggle-menu" />
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+            <nav class="menu">
+                <a href="http://127.0.0.1:5501/page2.html">Store</a>
+                <a href="https://apple.com">Mac</a>
+                <a href="https://apple.com">iPad</a>
+                <a href="https://apple.com">iPhone</a>
+                <a href="https://apple.com">Watch</a>
+                <a href="https://apple.com">Vision</a>
+                <a href="https://apple.com">Airpods</a>
+                <a href="https://apple.com">TV&Home</a>
+                <a href="https://apple.com">Entertainment</a>
+                <a href="https://apple.com">Accessories</a>
+                <a href="https://apple.com">Support</a>
+            </nav>
+            <div>
+                <img class="logo" src="/Untitled/images/search.logo.png" />
+            </div>
+            <div>
+                <a href="https://apple.com/market"><img class="logo" src="/Untitled/images/market.logo.png" /></a>
+            </div>
         </div>
-        <div>
-            <a href="https://apple.com/market"><img style="width: 12.97px; height: 14.91px"
-                    src="/Untitled/images/market.logo.png" /></a>
-        </div>
-    </div>
+    </header>
     <div class="header1">
         Pay monthly at 0% APR when you choose to check out with Apple Card Monthly
         Installments.
+    </div>
+    <div class="header3"></div>
+    <div class="header2">
+        <div class="header2-text">Gift magic this holiday.
+            <div class="gradient-text"> Store. </div>
+        </div>
+        <div class="help">
+            <div class="help-logo"> <img src="/Untitled/images/help-logo.png"> </div>
+            <div class="help1">
+                <div class="help2"> Need shopping help? </div>
+                <div class="help3"> <a href="https://apple.com/help"> Ask a Specialist</a> </div>
+
+                <div class="help2"> Visit an Apple Store </div>
+                <div class="help3"> <a href="https://apple.com/help">Find one near you</a> </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-list">
+        <div class="product-item">
+            <div class="product-item1"> <img src="/Untitled/images/item1.png"> Mac</div>
+            <div class="product-item2"> <img src="/Untitled/images/item2.png"> iPhone</div>
+            <div class="product-item3"><img src="/Untitled/images/item3.png">iPad</div>
+            <div class="product-item4"><img src="/Untitled/images/item4.png">Apple Watch</div>
+            <div class="product-item5"><img src="/Untitled/images/item5.png">Apple Vision Pro</div>
+            <div class="product-item6"><img src="/Untitled/images/item6.png">Airpods</div>
+            <div class="product-item7"><img src="/Untitled/images/item7.png">AirTag</div>
+            <div class="product-item8"><img src="/Untitled/images/item8.png">Apple TV 4K</div>
+            <div class="product-item9"><img src="/Untitled/images/item9.png">Homepod</div>
+            <div class="product-item10"><img src="/Untitled/images/item10.png">Accessories</div>
+            <div class="product-item11"><img src="/Untitled/images/item11.png">Apple Gift Card</div>
+        </div>
+
     </div>
 </body>
 
