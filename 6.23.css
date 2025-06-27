@@ -657,7 +657,8 @@ header {
   gap: 16px;
 }
 .tv {
-  margin-top: 100px;
+   padding-top: 12px;
+  box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -670,11 +671,13 @@ header {
   height: auto;
 }
 .tv-tablet {
-  margin-top: 100px;
+  padding-top: 12px;
+  box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   display: none;
+  
 }
 .slider-tablet {
   width: 6950px;
@@ -684,7 +687,8 @@ header {
   height: auto;
 }
 .tv-mobile {
-  margin-top: 100px;
+    padding-top: 12px;
+  box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -697,7 +701,79 @@ header {
   width: 100%;
   height: auto;
 }
-@media (max-width: 768px) {
+.ads {
+   padding-top: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.ads-slider {
+  width: 2200px;
+  
+}
+.ads-slides {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.text-slide3 p{
+  width: 223px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.ads-slide2{
+  width: 417px;
+  height: 236px;
+  background-color: #1B2632;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+.slidelogo2{
+  
+
+ padding-top: 180px;
+ padding-left: 73px;
+
+}
+.ads-slide3{
+  position: relative;
+  width: 417px;
+  height: 236px;
+  display: flex;
+  align-items: end;
+  
+}
+.text-slide3 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+ align-items: center;
+ padding-right: 15px;
+ padding-left: 15px;
+  box-sizing: border-box;
+
+}
+.ads-slide5{
+  width: 417px;
+  height: 236px;
+  background-color: #EBB799;
+
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -777,7 +853,7 @@ header {
     display: block;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 540px) {
   .menu {
     position: absolute;
     top: 30px;
