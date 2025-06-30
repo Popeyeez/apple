@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "inter";
+  background-color: #F5F5F7;
 }
 
 .header1 {
@@ -172,4 +173,203 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.gradient-text1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  box-sizing: border-box;
+  -webkit-text-fill-color: transparent; /* Текстийг ил тод болгох */
+  background: linear-gradient(
+    to right,
+    #0090f7,
+    #ba62fc,
+    #f2416b,
+    #f55600
+  ); /* Gradient өнгө */
+  -webkit-background-clip: text; /* Text clip */
+}
+
+.mid1-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  color: #6e6e73;
+  gap: 32px;
+}
+.mid1 {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 140px;
+  padding-top: 60px;
+  padding-right: 140px;
+ 
+  
+}
+.storecard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+    overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 20px;
+  
+ 
+}
+.storecard-img {
+  width: 480px;
+  height: 500px;
+  border-radius: 18px;
+}
+.storecard1 {
+  position: relative;
+}
+.storecard1 p {
+  
+font-weight: 700;
+font-size: 26px;
+line-height: 32px;
+letter-spacing: 0.2px;
+vertical-align: middle;
+
+  padding-left: 30px;
+  padding-top: 54px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.storecard1 p1 {
+  
+
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+
+  padding-left: 30px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.storecard p2 {
+  font-family: Inter;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+color: #B64400;
+padding-left: 30px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  position: absolute;
+
+}
+.mid2 {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 140px;
+  padding-top: 60px;
+  padding-right: 140px;
+  
+}
+.mid2-gray {
+  
+  width: 400px;
+  height: 500px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mid2-white{
+  flex-shrink: 0;
+width: 313px;
+height: 500px;
+background-color: white; 
+border-radius: 18px;
+position: relative;
+
+}
+.mid2-white p{
+  padding-left: 41.5px;
+font-weight: 700;
+font-size: 18px;
+line-height: 20px;
+letter-spacing: 0px;
+vertical-align: middle;
+padding-top: 37px;
+position: absolute;
+
+}
+.mid2-white p1 {
+color: #B64400;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0px;
+vertical-align: middle;
+padding-left: 41.5px;
+position: absolute;
+padding-top: 31px;
+
+}
+.mid2-white p2 {
+font-family: Inter;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0px;
+vertical-align: middle;
+padding-top: 145px;
+padding-left: 41.5px;
+position: absolute;
+}
+.listitem {
+   display: flex;
+   
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 20px;
+ 
+
+}
+.list-img {
+  width: 400px;
+  height: 500px;
+  flex-shrink: 0;
+   border-radius: 18px;
+}
+.mid2-gray p {
+
+font-weight: 700;
+font-size: 26px;
+line-height: 32px;
+letter-spacing: 0.2px;
+vertical-align: middle;
+
+width: 317px;
+padding-top: 33px;
+padding-left: 30px;
+box-sizing: border-box;
+  position: absolute;
+}
+.list-img1 {
+  padding-left: 41.5px;
+  padding-top: 70px;
+  width: 230px;
+  height: 230px;
 }

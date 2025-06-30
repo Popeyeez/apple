@@ -657,7 +657,7 @@ header {
   gap: 16px;
 }
 .tv {
-   padding-top: 12px;
+  padding-top: 12px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
@@ -677,7 +677,6 @@ header {
   overflow-x: scroll;
   overflow-y: hidden;
   display: none;
-  
 }
 .slider-tablet {
   width: 6950px;
@@ -687,7 +686,7 @@ header {
   height: auto;
 }
 .tv-mobile {
-    padding-top: 12px;
+  padding-top: 12px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
@@ -702,7 +701,7 @@ header {
   height: auto;
 }
 .ads {
-   padding-top: 32px;
+  padding-top: 32px;
   box-sizing: border-box;
   width: 100%;
   overflow-x: scroll;
@@ -710,7 +709,6 @@ header {
 }
 .ads-slider {
   width: 2200px;
-  
 }
 .ads-slides {
   width: 100%;
@@ -718,17 +716,17 @@ header {
   gap: 16px;
 }
 
-.text-slide3 p{
+.text-slide3 p {
   width: 223px;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
 }
-.ads-slide2{
+.ads-slide2 {
   width: 417px;
   height: 236px;
-  background-color: #1B2632;
+  background-color: #1b2632;
   color: white;
   padding: 15px;
   box-sizing: border-box;
@@ -737,20 +735,16 @@ header {
   gap: 15px;
   position: relative;
 }
-.slidelogo2{
-  
-
- padding-top: 180px;
- padding-left: 73px;
-
+.slidelogo2 {
+  padding-top: 180px;
+  padding-left: 73px;
 }
-.ads-slide3{
+.ads-slide3 {
   position: relative;
   width: 417px;
   height: 236px;
   display: flex;
   align-items: end;
-  
 }
 .text-slide3 {
   position: absolute;
@@ -758,16 +752,15 @@ header {
   width: 100%;
   justify-content: space-between;
   color: white;
- align-items: center;
- padding-right: 15px;
- padding-left: 15px;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
   box-sizing: border-box;
-
 }
-.ads-slide5{
+.ads-slide5 {
   width: 417px;
   height: 236px;
-  background-color: #EBB799;
+  background-color: #ebb799;
 
   padding: 20px 15px;
   box-sizing: border-box;
