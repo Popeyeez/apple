@@ -441,7 +441,7 @@ flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-color: white;
 font-weight: 700;
 font-size: 22px;
 line-height: 28px;
