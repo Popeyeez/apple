@@ -828,4 +828,35 @@ box-sizing: border-box;
   #toggle-menu:checked + .hamburger + .menu {
     display: flex;
   }
+  body {
+    max-width: 540px;
+    display: flex;
+  }
+  .help-ipad {
+    display: block;
+    padding-top:  20px;
+    padding-bottom: 20px;
+    padding-right: 250px;
+    box-sizing: border-box;
+  }
+  .header2-text {
+   font-size: 18px;
+    padding: 0;
+  }
+  .mid1-text {
+    font-size: 18px;
+    flex-shrink: 1;
+    white-space: wrap;
+    max-width: fit-content;
+  }
+  .end3 {
+    box-sizing: border-box;
+    padding-right: 250px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex:start;
+    gap: 18px;
+  }
 }
