@@ -130,6 +130,8 @@ header {
   justify-content: space-between;
   padding: 0 140px;
   box-sizing: border-box;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .header3 {
   background-image: url(/Untitled/images/page2-header.png);
@@ -737,6 +739,9 @@ box-sizing: border-box;
   padding-bottom: 60px;
   box-sizing: border-box;
 }
+.help-ipad {
+  display: none;
+}
 @media (max-width: 960px) {
   header {
     display: flex;
@@ -765,8 +770,45 @@ box-sizing: border-box;
 
   #toggle-menu:checked + .hamburger + .menu {
     display: flex;
+  } 
+  .header2 , .product-list {
+    width: 100%;
+    padding: 0;
   }
+  .help {
+    display: none;
+  }
+  .help-ipad { 
+    display: block;
+    padding-right:  680px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .header2-text {
+    max-width: 960px;
+    font-size: 24px;
+  }
+  .mid1-text {
+    width: 960px;
+    font-size: 24px;
+  }
+ 
+  body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 60px;
+  box-sizing: border-box;
+  
+  width: 960px;
 }
+.end {
+  padding-right: 120px;
+}
+}
+
+
 @media (max-width: 540px) {
   .menu {
     position: absolute;
