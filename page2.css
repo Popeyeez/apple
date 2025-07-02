@@ -210,6 +210,12 @@ header {
   
   
 }
+.mid1-text p {
+  position: absolute;
+  padding-top: 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
 .mid1 {
   width: 100%;
 
@@ -614,6 +620,8 @@ padding-left: 30px;
   width: 100%;
       overflow-x: scroll;
   overflow-y: hidden;
+  padding-top: 30px;
+  box-sizing: border-box;
 }
 .last p3 {
   position: absolute;
